@@ -1,0 +1,160 @@
+/* src/App.css */
+
+/* Global reset + font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #1e1e2f; /* Dark background */
+  color: #ffffff; /* White text */
+}
+
+/* Layout principal : sidebar à gauche, contenu à droite */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 280px;
+  background-color: #2a2a40; /* Darker sidebar */
+  padding: 20px;
+  color: #ffffff;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+/* Bouton + Add Project */
+.add-project-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #3a3a5a; /* Button background */
+  color: #ffffff;
+  border: none;
+  text-align: left;
+  margin-bottom: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-project-btn:hover {
+  background-color: #4a4a6a; /* Hover effect */
+}
+
+/* Liste de projets dans la sidebar */
+.project-list .list-group-item {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 8px 0;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-list .list-group-item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.project-list .list-group-item a:hover {
+  text-decoration: underline;
+}
+
+.project-list .btn-danger {
+  background: none;
+  border: none;
+  color: #ff6b6b; /* Red for delete buttons */
+}
+
+/* Formulaire de création de projet */
+.project-form {
+  background-color: #2e2e4e; /* Form background */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.project-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-form .form-control {
+  border-radius: 4px;
+  margin-top: 5px;
+  background-color: #3a3a5a; /* Input background */
+  color: #ffffff; /* Input text */
+  border: 1px solid #4a4a6a;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #1e1e2f; /* Main content background */
+}
+
+/* Écran vide quand aucun projet n’est sélectionné */
+.empty-project-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.empty-project-screen .empty-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+.create-project-btn {
+  background-color: #3a3a5a;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 600;
+}
+.create-project-btn:hover {
+  background-color: #4a4a6a;
+}
+
+/* TASK LIST */
+.task-list-header {
+  border-bottom: 1px solid #4a4a6a;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.task-list-header h2 {
+  margin: 0;
+}
+
+.task-list-header small {
+  display: block;
+  font-size: 0.9rem;
+  color: #bbbbbb; /* Subtle gray for small text */
+}
+
+.task-list-header p {
+  font-size: 0.95rem;
+  margin: 5px 0 0;
+}
+
+/* Checkbox + Tâches */
+.list-group-item {
+  border-radius: 4px;
+  border: 1px solid #4a4a6a;
+  margin-bottom: 5px;
+  background: #2e2e4e; /* Task item background */
+  color: #ffffff;
+}
+
+.list-group-item:hover {
+  background: #3a3a5a;
+}
